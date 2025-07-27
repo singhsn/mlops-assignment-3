@@ -1,9 +1,11 @@
+# Core packages (use precompiled wheels)
 numpy
-matplotlib
-statsmodels
-scikit-learn
+scipy
 pandas
-scipy==1.11.4
-statsmodels==0.14.0
 joblib
+scikit-learn
+
+# PyTorch CPU-only version (no CUDA)
 torch
+torchvision
+torchaudio
