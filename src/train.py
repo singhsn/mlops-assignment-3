@@ -65,10 +65,8 @@ def train_model(X, y):
 def save_model(model, test_data):
     try:
         os.makedirs(MODEL_DIR, exist_ok=True)
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-
-        model_path = os.path.join(MODEL_DIR, f"{timestamp}_{MODEL_NAME}")
-        test_path = os.path.join(MODEL_DIR, f"{timestamp}_{TEST_DATA_NAME}")
+        model_path = os.path.join(MODEL_DIR, MODEL_NAME)
+        test_path = os.path.join(MODEL_DIR, TEST_DATA_NAME)
 
         joblib.dump(model, model_path)
         joblib.dump(test_data, test_path)
